@@ -46,12 +46,12 @@ let Value={
 }
 
 React.useEffect(()=>{
-    const unsubscribe=auth.onAuthStateChanged((user)=>{
-     setCurrentUser(user);
+    const unsubscribe=auth.onAuthStateChanged(async(user)=>{
+     await setCurrentUser(user);
      setLoading(false)
     })
 
-    return unsubscribe
+    return unsubscribe;
 },[]);
 
 

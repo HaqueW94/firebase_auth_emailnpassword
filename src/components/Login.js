@@ -21,10 +21,9 @@ function Login() {
         await login(emailRef.current.value,passwordRef.current.value);
          history.push('/');
       }catch(err){
+        setLoading(false);
         setError("Failed to login");
       }
-
-      setLoading(false);
     }
 
 

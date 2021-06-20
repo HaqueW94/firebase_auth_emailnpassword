@@ -23,10 +23,9 @@ function Signup(){
         await signup(emailRef.current.value,passwordRef.current.value);
         history.push('/');
       }catch(err){
+        setLoading(false);
         setError("Failed to create account");
       }
-
-      setLoading(false);
     }
 
 
